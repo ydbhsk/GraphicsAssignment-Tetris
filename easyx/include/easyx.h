@@ -246,7 +246,7 @@ int drawtext(TCHAR c, RECT* pRect, UINT uFormat);		// Output a char in the speci
 //		fbClipPrecision: Specifies the clip accuracy of the text
 //		fbQuality: Specifies the output quality of the text
 //		fbPitchAndFamily: Specifies a font family that describes a font in a general way
-void settextstyle(int nHeight, int nWidth, LPCTSTR lpszFace);
+void settextstyle(int nHeight, int nWidth, const wchar_t *lpszFace);
 void settextstyle(int nHeight, int nWidth, LPCTSTR lpszFace, int nEscapement, int nOrientation, int nWeight, bool bItalic, bool bUnderline, bool bStrikeOut);
 void settextstyle(int nHeight, int nWidth, LPCTSTR lpszFace, int nEscapement, int nOrientation, int nWeight, bool bItalic, bool bUnderline, bool bStrikeOut, BYTE fbCharSet, BYTE fbOutPrecision, BYTE fbClipPrecision, BYTE fbQuality, BYTE fbPitchAndFamily);
 void settextstyle(const LOGFONT *font);	// Set current text style
