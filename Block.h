@@ -295,6 +295,21 @@ void DrawInfo()
     char str[20];
     sprintf(str, "Score: %d", Score);
     outtextxy(0, 0, str);
+    setfont(15, 0, "Times New Roman");
+    settextcolor(RGB(255, 255, 255));
+    sprintf(str, "Up: Rotate");
+    outtextxy(GRID_WIDTH * SLIDER_PX - 100, 0, str);
+    sprintf(str, "Down: Move Down");
+    outtextxy(GRID_WIDTH * SLIDER_PX - 100, 15, str);
+    sprintf(str, "Left: Move Left");
+    outtextxy(GRID_WIDTH * SLIDER_PX - 100, 30, str);
+    sprintf(str, "Right: Move Right");
+    outtextxy(GRID_WIDTH * SLIDER_PX - 100, 45, str);
+    sprintf(str, "Space: Quick Down");
+    outtextxy(GRID_WIDTH * SLIDER_PX - 100, 60, str);
+    sprintf(str, "ESC: Exit");
+    outtextxy(GRID_WIDTH * SLIDER_PX - 100, 75, str);
+
 }
 
 #endif //PROJECT_BLOCK_H

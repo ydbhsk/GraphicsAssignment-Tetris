@@ -7,9 +7,11 @@
 #define INPUT_DELAY  100    // 输入延迟
 #define LEVEL       10      // 难度系数
 
-int Score = 0;
+void myTest();
+int Score = 0; /** 分数 */
 
 int main() {
+//    myTest();
     srand(time(NULL));
     Block curBlock(BLOCK_EMPTY, 0, PointStart);
     InitGrid();
@@ -81,4 +83,19 @@ int main() {
     EndBatchDraw();
     closegraph();
     return 0;
+}
+
+void myTest(){
+    IMAGE img,c1,c2;
+    loadimage(&img, _T("background.jpg"));
+    loadimage(&c1, _T("Mimikyu1.png"));
+    loadimage(&c2, _T("!Mimikyu1.png"));
+    initgraph(1023,682);
+    BeginBatchDraw();
+    putimage(0, 0, &img);
+    while(1){
+        putimage(500, 500, &c2, SRCAND);
+        putimage(500, 500, &c1, SRCINVERT);
+        FlushBatchDraw();
+    }
 }
